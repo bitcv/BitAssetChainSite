@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="robots" content="index, follow">
+<meta name="description" content="Bit Asset Chain">
+<meta name="keywords" content="Bit Asset Chain">
+<meta name="author" content="Bit Asset Chain">
+
+<title>Bit Asset Chain</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet"> 
+
+<!-- Plugins -->
+<link rel="stylesheet" href="assets/vendor/swiper/css/swiper.min.css">
+<link rel="stylesheet" href="assets/vendor/hamburgers/hamburgers.min.css" type="text/css">
+<link rel="stylesheet" href="assets/vendor/animate/animate.min.css" type="text/css">
+<link rel="stylesheet" href="assets/vendor/fancybox/css/jquery.fancybox.min.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css" type="text/css">
+<link rel="stylesheet" href="assets/fonts/line-icons/line-icons.css" type="text/css">
+<link rel="stylesheet" href="assets/fonts/line-icons-pro/line-icons-pro.css" type="text/css">
+
+<!-- Linea Icons -->
+<link rel="stylesheet" href="assets/fonts/linea/arrows/linea-icons.css" type="text/css">
+<link rel="stylesheet" href="assets/fonts/linea/basic/linea-icons.css" type="text/css">
+<link rel="stylesheet" href="assets/fonts/linea/ecommerce/linea-icons.css" type="text/css">
+<link rel="stylesheet" href="assets/fonts/linea/software/linea-icons.css" type="text/css">
+
+<!-- Global style (main) -->
+<link id="stylesheet" type="text/css" href="assets/css/boomerang.min.css" rel="stylesheet" media="screen">
+
+<!-- Custom style - Remove if not necessary -->
+<link type="text/css" href="assets/css/custom-style.css" rel="stylesheet">
+
+<!-- Favicon -->
+<link href="assets/images/favicon.png" rel="icon" type="image/png">
+
+<!-- custom style -->
+<style>
+#ziPos .card {
+    height: 100%;
+}
+#bacChain .intro {
+    font-size: 13px;
+    color: #f0ffff;
+}
+#bitcvWallet .qrcode-wrap img {
+    width: 140px;
+    height: 140px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+<!-- MAIN WRAPPER -->
+<main class="body-wrap">
+    <!-- Header -->
+    <div class="header">
+        <!-- Global Search -->
+        <section id="sctGlobalSearch" class="global-search global-search-overlay">
+            <div class="container">
+                <div class="global-search-backdrop mask-dark--style-2"></div>
+
+                <!-- Search form -->
+                <form class="form-horizontal form-global-search z-depth-2-top" role="form">
+                    <div class="px-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <input type="text" class="search-input" placeholder="Type and hit enter ...">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="close-search" data-toggle="global-search" title="Close search bar"></a>
+                </form>
+            </div>
+        </section>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar--bold  navbar-transparent navbar-inverse bg-dark  ">
+            <div class="container navbar-container">
+                <!-- Brand/Logo -->
+                <a class="navbar-brand" href="home.html">
+                    <img src="assets/images/logo/logo-1-a.png" class="d-none d-lg-inline-block" alt="Boomerang">
+                    <img src="assets/images/logo/logo-1-a.png" class="d-lg-none" alt="Boomerang">
+                </a>
+                <div class="d-inline-block">
+                    <!-- Navbar toggler  -->
+                    <button class="navbar-toggler hamburger hamburger-js hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbar_main">
+                    <!-- Navbar links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">区块浏览器</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">项目动态</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">白皮书</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">开发者社区</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">加入我们</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="home.html">中文</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 首页介绍 -->
+    <section class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('assets/images/backgrounds/slider/img-41.jpg'); background-position: center bottom;">
+        <span class="mask bg-base-1 alpha-7"></span>
+        <div class="text-center">
+            <div class="container">
+                <div class="py-5" style="margin: 80px 0;">
+                    <div class="fluid-paragraph text-center">
+                        <h3 class="heading heading-xl strong-400 text-normal c-white">Bit Asset Chain</h3>
+                        <h3 class="h1 strong-400 text-normal c-white">去中心化的数字资产管理公链</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ZI-POS共识 -->
+    <section class="slice bg-base-5" id="ziPos">
+        <div class="container">
+            <div class="section-title section-title--style-1 text-center mt-4 mb-3">
+                <h3 class="section-title-inner">
+                    <span>ZI-POS 共识</span>
+                </h3>
+                <div class="c-gray-light strong-300 text-center" style="font-size: 12px; margin-top: -0.5rem;">Zero Inflation Proof of Stake</div>
+                <span class="section-title-delimiter clearfix"></span>
+            </div>
+            <div class="fluid-paragraph fluid-paragraph-sm strong-300 text-center">全球首创零通胀双币种 Proof of Stake 共识机制</div>
+
+            <div class="row cols-xs-space cols-sm-space cols-md-space mt-5 align-items-stretch">
+                <div class="col-lg-4 col-12">
+                    <div class="card card-colored bg-base-1">
+                        <div class="card-body px-4">
+                            <div class="icon-block--style-1-v5 text-center">
+                                <div class="block-icon-lg c-white mt-3">
+                                    <i class="icon-basic-heart"></i>
+                                </div>
+                                <div class="block-content mt-3">
+                                    <h3 class="heading heading-4 strong-500 text-capitalize">BCV</h3>
+                                    <p class="mt-3">BAC Chain 的权益通证，参与竞选的节点需要抵押 BCV，而为节点投票的用户，需要销毁 BCV 方可获得投票权。抵押或者销毁 BCV 是获得 BAC 的唯一途径</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card card-colored bg-base-2">
+                        <div class="card-body px-4">
+                            <div class="icon-block--style-1-v5 text-center">
+                                <div class="block-icon-lg c-white mt-3">
+                                    <i class="icon-basic-pencil-ruler"></i>
+                                </div>
+                                <div class="block-content mt-3">
+                                    <h3 class="heading heading-4 strong-500 text-capitalize">BAC</h3>
+                                    <p>BAC Chain 的功能通证，BAC Chain 的链上业务，如转账手续费，智能合约执行，分布式存贮等业务都需要消耗 BAC。BAC 的经济模型参考 BTC 的总量恒定，产量减半机制，由 0 流通量开始挖矿产出，项目方 0 预留</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card card-colored bg-base-1">
+                        <div class="card-body px-4">
+                            <div class="icon-block--style-1-v5 text-center">
+                                <div class="block-icon-lg c-white mt-3">
+                                    <i class="icon-basic-accelerator"></i>
+                                </div>
+                                <div class="block-content mt-3">
+                                    <h3 class="heading heading-4 strong-500 text-capitalize">Bit Asset Chain (BAC Chain)</h3>
+                                    <p>专门为数字资产管理而设计的去中心化的公链系统</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <a href="zi-pos.html" class="btn btn-styled btn-base-1 btn-circle">更多详情</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAC Chain -->
+    <section id="bacChain" class="slice has-bg-cover bg-size-cover" style="background-image: url(assets/images/backgrounds/slider/img-36.jpg); background-position: center center; background-attachment: fixed;">
+        <span class="mask mask-base-1--style-1"></span>
+        <div class="sct-inner container">
+            <div class="section-title section-title-inverse section-title--style-1 text-center mt-4 mb-3">
+                <h3 class="section-title-inner c-white">
+                    <span>Bit Asset Chain (BAC Chain)</span>
+                </h3>
+                <span class="section-title-delimiter clearfix"></span>
+            </div>
+            <div class="fluid-paragraph fluid-paragraph-sm c-white strong-300 text-center">
+                专门为数字资产管理而设计的去中心化的公链系统<br>BAC Chain可以发行兼容ERC1404标准符合STO要求的通证
+            </div>
+
+            <div class="row cols-xs-space cols-sm-space cols-md-space" style="margin-top: 70px; margin-bottom: 50px;">
+                <div class="col-lg-4 py-4">
+                    <div class="icon-block icon-block--style-1-v1">
+                        <div class="block-icon c-white">
+                            <i class="ion-ios-speedometer-outline"></i>
+                        </div>
+                        <div class="block-content">
+                            <h3 class="heading heading-4 c-base-text-1 strong-500">POS + PBFT 共识机制</h3>
+                            <p class="mt-3 strong-300 intro">POS 的高 TPS 性能可以保证区块间隔在 6.5 秒左右，而拜占庭容错共识机制则可以保证每个产生的区块都可以被立即确认，转账无需等待一定的区块数即可确认该笔转账有效，大大缩短了转账的时间。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-4">
+                    <div class="icon-block icon-block--style-1-v1">
+                        <div class="block-icon c-white">
+                            <i class="ion-ios-speedometer-outline"></i>
+                        </div>
+                        <div class="block-content">
+                            <h3 class="heading heading-4 c-base-text-1 strong-500">外围存储网</h3>
+                            <p class="mt-3 strong-300 intro">主网仅存储账本数据，同时建立使用外围存储网，将图片等占用较大存储空间的额数据存放到存储网上，降低主网数据存储量，并增加公链应用场景。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-4">
+                    <div class="icon-block icon-block--style-1-v1">
+                        <div class="block-icon c-white">
+                            <i class="ion-ios-speedometer-outline"></i>
+                        </div>
+                        <div class="block-content">
+                            <h3 class="heading heading-4 c-base-text-1 strong-500">自组织社群机制</h3>
+                            <p class="mt-3 strong-300 intro">将社区的节点，社区和会员进行自组织分层，节点管理社区，社区管理会员，互相关系绑定，并互有挖矿收益分成，形成有效的沟通和推广机制。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-4">
+                    <div class="icon-block icon-block--style-1-v1">
+                        <div class="block-icon c-white">
+                            <i class="ion-ios-speedometer-outline"></i>
+                        </div>
+                        <div class="block-content">
+                            <h3 class="heading heading-4 c-base-text-1 strong-500">ERC-1404</h3>
+                            <p class="mt-3 strong-300 intro">支持 STO 通证的 ERC-1404 协议，满足合规项目方的 STO 通证发行。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-4">
+                    <div class="icon-block icon-block--style-1-v1">
+                        <div class="block-icon c-white">
+                            <i class="ion-clock"></i>
+                        </div>
+                        <div class="block-content">
+                            <h3 class="heading heading-4 c-base-text-1 strong-500">安全的智能合约</h3>
+                            <p class="mt-3 strong-300 intro">采用 BVM 虚拟机，兼容 Web Assembly，在代码层面明确了接口之间的权限，合约的入口函数进行了权限限制，防止调用未经授权的函数，破坏合约执行内容。并将通用性较强的合约写成内置合约并硬编码在链上，开发者可以按照合约的接口参数进行调用，降低了开发成本，也提升了安全性和稳定性。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-4">
+                    <div class="icon-block icon-block--style-1-v1">
+                        <div class="block-icon c-white">
+                            <i class="ion-pie-graph"></i>
+                        </div>
+                        <div class="block-content">
+                            <h3 class="heading heading-4 c-base-text-1 strong-500">监管</h3>
+                            <p class="mt-3 strong-300 intro">虽然去中心化是区块链的特性，但是区块链也是需要接受政策监管的，而作为资产管理业务的公链，更加要重视监管。BAC Chain 通过隐私授权访问的方法接受监管部门的问询与监管。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 自组织社群机制 -->
+    <section class="slice-lg sct-color-1">
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space cols-md-space py-3">
+                <div class="col-lg-5">
+                    <div class="px-4 text-center text-lg-left">
+                        <h3 class="heading heading-1 strong-500">自组织社群机制</h3>
+                        <p class="text-lg line-height-1_8 mt-4">将社区的节点，社区和会员进行自组织分层，节点管理社区，社区管理会员，互相关系绑定，并互有挖矿收益分成，形成有效的沟通和推广机制。</p>
+                        <a href="#" class="btn btn-styled btn-base-1 btn-circle mt-4">更多详情</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 ml-lg-auto">
+                    <div class="">
+                        <!-- Progress bar - Small -->
+                        <h4 class="progress-tooltip text-uppercase" style="left: 60%;">Identity</h4>
+                        <div class="progress progress-sm">
+                            <div class="progress-bar bg-base-4" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                        </div>
+
+                        <h4 class="progress-tooltip text-uppercase" style="left: 90%;">Web Design</h4>
+                        <div class="progress progress-sm">
+                            <div class="progress-bar bg-base-4" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                        </div>
+
+                        <h4 class="progress-tooltip text-uppercase" style="left: 70%;">Graphic</h4>
+                        <div class="progress progress-sm">
+                            <div class="progress-bar bg-base-4" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                        </div>
+
+                        <h4 class="progress-tooltip text-uppercase" style="left: 85%;">Marketing</h4>
+                        <div class="progress progress-sm">
+                            <div class="progress-bar bg-base-4" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 币威钱包 -->
+    <div id="bitcvWallet" class="sct-color-2 slice pb-0">
+        <div class="container d-flex">
+            <div class="row cols-xs-space cols-sm-space cols-md-space">
+                <div class="col-lg-6 text-center text-lg-left align-self-center">
+                    <div class="px-4">
+                        <h2 class="heading heading-1">币威钱包</h2>
+                        <p class="text-lg mt-4 line-height-1_8">币威钱包是 BAC Chain 的官方钱包，自从 2018 年 5 月第一版上线后，已经迭代了 6 个版本除了对 BAC Chain 的 Token 和挖矿等功能的支持外，还支持 BTC，ETH，TRX 等超过 20 条公链和 DApps。币威钱包是一款冷热结合的钱包，用户可以根据自己的使用习惯，切换使用热钱包或者 HD 钱包，问世一年多来受到了超过 200 万用户的青睐。</p>
+                        <div class="qrcode-wrap d-inline-block text-center mt-2">
+                            <img src="assets/images/bac/qrcode_bitcvwallet_app.png" alt="">
+                            <p>iOS/Android 扫码下载</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ml-lg-auto align-self-end">
+                    <img src="assets/images/slider/elements/model-m-1.png" class="img-fluid img-center">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer ">
+        <div class="footer-bottom py-4">
+            <div class="container">
+                <div class="row cols-xs-space col-sm-space align-items-center">
+                    <div class="col-lg-3 col-12">
+                        <div class="text-center text-lg-left">
+                            <div class="copyright">
+                                <ul class="copy-links no-margin">
+                                    <li>
+                                        &copy; 2019 Bit Asset Chain
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="text-center">
+                            <ul class="footer-menu footer-menu-sm">
+                                <li>
+                                    <a href="https://webpixels.io" target="_blank" style="padding-left: 0;">Official website</a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/webpixels.io" target="_blank" style="padding-left: 0;">Instagram</a>
+                                </li>
+                                <li>
+                                    <a href="https://facebook.com/webpixels" target="_blank" style="padding-left: 0;">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses" target="_blank">License</a>
+                                </li>
+                                <li>
+                                    <a href="https://goo.gl/9BbH7R" target="_blank">Buy now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="text-center text-lg-right">
+                            <ul class="social-media social-media--style-1-v4">
+                                <li>
+                                    <a href="https://www.facebook.com/webpixels/" class="facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/webpixels.io/" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://dribbble.com/webpixels" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<!-- SCRIPTS -->
+<a href="#" class="back-to-top btn-back-to-top"></a>
+
+<!-- Core -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/popper/popper.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/slidebar/slidebar.js"></script>
+<script src="assets/js/classie.js"></script>
+
+<!-- Bootstrap Extensions -->
+<script src="assets/vendor/bootstrap-notify/bootstrap-growl.min.js"></script>
+<script src="assets/vendor/scrollpos-styler/scrollpos-styler.js"></script>
+
+<!-- Plugins: Sorted A-Z -->
+<script src="assets/vendor/adaptive-backgrounds/adaptive-backgrounds.js"></script>
+<script src="assets/vendor/countdown/js/jquery.countdown.min.js"></script>
+<script src="assets/vendor/dropzone/dropzone.min.js"></script>
+<script src="assets/vendor/easy-pie-chart/jquery.easypiechart.min.js"></script>
+<script src="assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+<script src="assets/vendor/flip/flip.min.js"></script>
+<script src="assets/vendor/footer-reveal/footer-reveal.min.js"></script>
+<script src="assets/vendor/gradientify/jquery.gradientify.min.js"></script>
+<script src="assets/vendor/headroom/headroom.min.js"></script>
+<script src="assets/vendor/headroom/jquery.headroom.min.js"></script>
+<script src="assets/vendor/input-mask/input-mask.min.js"></script>
+<script src="assets/vendor/instafeed/instafeed.js"></script>
+<script src="assets/vendor/milestone-counter/jquery.countTo.js"></script>
+<script src="assets/vendor/nouislider/js/nouislider.min.js"></script>
+<script src="assets/vendor/paraxify/paraxify.min.js"></script>
+<script src="assets/vendor/select2/js/select2.min.js"></script>
+<script src="assets/vendor/sticky-kit/sticky-kit.min.js"></script>
+<script src="assets/vendor/swiper/js/swiper.min.js"></script>
+<script src="assets/vendor/textarea-autosize/autosize.min.js"></script>
+<script src="assets/vendor/typeahead/typeahead.bundle.min.js"></script>
+<script src="assets/vendor/typed/typed.min.js"></script>
+<script src="assets/vendor/vide/vide.min.js"></script>
+<script src="assets/vendor/viewport-checker/viewportchecker.min.js"></script>
+<script src="assets/vendor/wow/wow.min.js"></script>
+
+<!-- Isotope -->
+<script src="assets/vendor/isotope/isotope.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+<!-- App JS -->
+<script src="assets/js/boomerang.min.js"></script>
+
+</body>
+</html>
