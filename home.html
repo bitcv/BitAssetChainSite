@@ -58,9 +58,18 @@
 #ziPos .card {
     height: 100%;
 }
+#ziPos .icon {
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+}
 #bacChain .intro {
     font-size: 13px;
     color: #f0ffff;
+}
+#bacChain .icon {
+    width: 50px;
+    height: 50px;
 }
 #bitcvWallet .qrcode-wrap img {
     width: 140px;
@@ -187,7 +196,7 @@
 
 
     <!-- ZI-POS共识 -->
-    <section class="slice bg-base-5" id="ziPos">
+    <section id="ziPos" class="slice bg-base-5">
         <div class="container">
             <div class="section-title section-title--style-1 text-center mt-4 mb-3">
                 <h3 class="section-title-inner">
@@ -203,9 +212,7 @@
                     <div class="card card-colored bg-base-1">
                         <div class="card-body px-4">
                             <div class="icon-block--style-1-v5 text-center">
-                                <div class="block-icon-lg c-white mt-3">
-                                    <i class="icon-basic-heart"></i>
-                                </div>
+                                <img class="icon" src="assets/images/bac/icon/icon_logo_bcv.png" alt="">
                                 <div class="block-content mt-3">
                                     <h3 class="heading heading-4 strong-500 text-capitalize">BCV</h3>
                                     <p class="mt-3">BAC Chain 的权益通证，参与竞选的节点需要抵押 BCV，而为节点投票的用户，需要销毁 BCV 方可获得投票权。抵押或者销毁 BCV 是获得 BAC 的唯一途径</p>
@@ -218,9 +225,7 @@
                     <div class="card card-colored bg-base-2">
                         <div class="card-body px-4">
                             <div class="icon-block--style-1-v5 text-center">
-                                <div class="block-icon-lg c-white mt-3">
-                                    <i class="icon-basic-pencil-ruler"></i>
-                                </div>
+                                <img class="icon" src="assets/images/bac/icon/icon_logo_bac.png" alt="">
                                 <div class="block-content mt-3">
                                     <h3 class="heading heading-4 strong-500 text-capitalize">BAC</h3>
                                     <p>BAC Chain 的功能通证，BAC Chain 的链上业务，如转账手续费，智能合约执行，分布式存贮等业务都需要消耗 BAC。BAC 的经济模型参考 BTC 的总量恒定，产量减半机制，由 0 流通量开始挖矿产出，项目方 0 预留</p>
@@ -233,9 +238,7 @@
                     <div class="card card-colored bg-base-1">
                         <div class="card-body px-4">
                             <div class="icon-block--style-1-v5 text-center">
-                                <div class="block-icon-lg c-white mt-3">
-                                    <i class="icon-basic-accelerator"></i>
-                                </div>
+                                <img class="icon" src="assets/images/bac/icon/icon_logo_bacChain.png" alt="">
                                 <div class="block-content mt-3">
                                     <h3 class="heading heading-4 strong-500 text-capitalize">Bit Asset Chain (BAC Chain)</h3>
                                     <p>专门为数字资产管理而设计的去中心化的公链系统</p>
@@ -269,8 +272,8 @@
             <div class="row cols-xs-space cols-sm-space cols-md-space" style="margin-top: 70px; margin-bottom: 50px;">
                 <div class="col-lg-4 py-4">
                     <div class="icon-block icon-block--style-1-v1">
-                        <div class="block-icon c-white">
-                            <i class="ion-ios-speedometer-outline"></i>
+                        <div class="block-icon">
+                            <img class="icon" src="assets/images/bac/icon/icon_feature_1.png" alt="">
                         </div>
                         <div class="block-content">
                             <h3 class="heading heading-4 c-base-text-1 strong-500">POS + PBFT 共识机制</h3>
@@ -280,8 +283,8 @@
                 </div>
                 <div class="col-lg-4 py-4">
                     <div class="icon-block icon-block--style-1-v1">
-                        <div class="block-icon c-white">
-                            <i class="ion-ios-speedometer-outline"></i>
+                        <div class="block-icon">
+                            <img class="icon" src="assets/images/bac/icon/icon_feature_2.png" alt="">
                         </div>
                         <div class="block-content">
                             <h3 class="heading heading-4 c-base-text-1 strong-500">外围存储网</h3>
@@ -291,8 +294,8 @@
                 </div>
                 <div class="col-lg-4 py-4">
                     <div class="icon-block icon-block--style-1-v1">
-                        <div class="block-icon c-white">
-                            <i class="ion-ios-speedometer-outline"></i>
+                        <div class="block-icon">
+                            <img class="icon" src="assets/images/bac/icon/icon_feature_3.png" alt="">
                         </div>
                         <div class="block-content">
                             <h3 class="heading heading-4 c-base-text-1 strong-500">自组织社群机制</h3>
@@ -302,8 +305,8 @@
                 </div>
                 <div class="col-lg-4 py-4">
                     <div class="icon-block icon-block--style-1-v1">
-                        <div class="block-icon c-white">
-                            <i class="ion-ios-speedometer-outline"></i>
+                        <div class="block-icon">
+                            <img class="icon" src="assets/images/bac/icon/icon_feature_4.png" alt="">
                         </div>
                         <div class="block-content">
                             <h3 class="heading heading-4 c-base-text-1 strong-500">ERC-1404</h3>
@@ -313,8 +316,8 @@
                 </div>
                 <div class="col-lg-4 py-4">
                     <div class="icon-block icon-block--style-1-v1">
-                        <div class="block-icon c-white">
-                            <i class="ion-clock"></i>
+                        <div class="block-icon">
+                            <img class="icon" src="assets/images/bac/icon/icon_feature_5.png" alt="">
                         </div>
                         <div class="block-content">
                             <h3 class="heading heading-4 c-base-text-1 strong-500">安全的智能合约</h3>
@@ -324,8 +327,8 @@
                 </div>
                 <div class="col-lg-4 py-4">
                     <div class="icon-block icon-block--style-1-v1">
-                        <div class="block-icon c-white">
-                            <i class="ion-pie-graph"></i>
+                        <div class="block-icon">
+                            <img class="icon" src="assets/images/bac/icon/icon_feature_6.png" alt="">
                         </div>
                         <div class="block-content">
                             <h3 class="heading heading-4 c-base-text-1 strong-500">监管</h3>
@@ -537,6 +540,9 @@ $(function () {
     /**
      * canvas 动画效果
      */
+    if (window.location.href.indexOf('nocanvas') > -1) {
+        return
+    }
     particlesJS("particles-js", {
       "particles": {
         "number": {
