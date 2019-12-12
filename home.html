@@ -47,6 +47,14 @@
 
 <!-- custom style -->
 <style>
+#banner .canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
 #ziPos .card {
     height: 100%;
 }
@@ -58,8 +66,36 @@
     width: 140px;
     height: 140px;
 }
-</style>
 
+#roadMap {
+    background-color: #292F36;
+}
+#roadMap .map-wrap {
+    height: 500px;
+    padding: 0 20px;
+    overflow-x: auto;
+}
+#roadMap .map-wrap img {
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+    height: 6px
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: hsla(0,0%,100%,.5);
+    -webkit-box-shadow: 0 0 1px hsla(0,0%,100%,.5)
+}
+::-webkit-scrollbar-track {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: hsla(0,0%,100%,.3)
+}
+</style>
 
 </head>
 <body>
@@ -133,8 +169,10 @@
     </div>
 
     <!-- 首页介绍 -->
-    <section class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('assets/images/backgrounds/slider/img-41.jpg'); background-position: center bottom;">
+    <section id="banner" class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('assets/images/backgrounds/slider/img-41.jpg'); background-position: center bottom;">
         <span class="mask bg-base-1 alpha-7"></span>
+        <div id="particles-js" class="canvas"></div>
+        <!-- <canvas class="canvas"></canvas> -->
         <div class="text-center">
             <div class="container">
                 <div class="py-5" style="margin: 80px 0;">
@@ -360,6 +398,22 @@
         </div>
     </div>
 
+    <!-- 里程碑与路线图 -->
+    <div id="roadMap" class="slice">
+            <div class="container">
+                <div class="section-title section-title-inverse section-title--style-1 text-center mt-4 mb-3">
+                    <h3 class="section-title-inner">
+                        <span>里程碑与路线图</span>
+                    </h3>
+                    <!-- <div class="c-gray-light strong-300 text-center" style="font-size: 12px; margin-top: -0.5rem;">Zero Inflation Proof of Stake</div>
+                    <span class="section-title-delimiter clearfix"></span> -->
+                </div>
+                <div class="map-wrap mt-5">
+                    <img src="assets/images/bac/road_map.png" alt="">
+                </div>
+            </div>
+        </div>
+
     <!-- Footer -->
     <footer id="footer" class="footer ">
         <div class="footer-bottom py-4">
@@ -471,8 +525,130 @@
 <script src="assets/vendor/isotope/isotope.min.js"></script>
 <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
+<!-- particles.js -->
+<script src="assets/vendor/particles/particles.min.js"></script>
+
 <!-- App JS -->
 <script src="assets/js/boomerang.min.js"></script>
+
+<!-- custom script -->
+<script>
+$(function () {
+    /**
+     * canvas 动画效果
+     */
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 2,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 150,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+})
+</script>
 
 </body>
 </html>
