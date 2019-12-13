@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="472px" height="380px" viewBox="0 0 472 380" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>编组 11</title>
+    <desc>Created with Sketch.</desc>
+    <g id="BAC官网" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-11">
+            <path d="M397.126,260 L471.588,380 L-0.001,380 L74.46,260 L397.126,260 Z" id="形状结合" fill="#6190BE"></path>
+            <path d="M316.795,130 L391.256,250 L81,250 L155.462,130 L316.795,130 Z" id="形状结合" fill="#62A4E4"></path>
+            <path d="M236.462,0 L310.923,120 L162,120 L236.462,0 Z" id="形状结合" fill="#3FA0FF"></path>
+            <text id="节点" font-family="PingFang-SC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#FFFFFF">
+                <tspan x="218" y="80">节点</tspan>
+            </text>
+            <text id="社区" font-family="PingFang-SC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#FFFFFF">
+                <tspan x="218" y="196">社区</tspan>
+            </text>
+            <text id="会员" font-family="PingFang-SC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#FFFFFF">
+                <tspan x="218" y="326">会员</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
