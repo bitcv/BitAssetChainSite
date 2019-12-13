@@ -518,7 +518,7 @@ $(function () {
     const canvas = document.querySelector('canvas');
     const ctx = canvas.getContext('2d');
 
-    const RESOLUTION = window.devicePixelRatio;
+    const RESOLUTION = window.innerWidth > 900 ? 1 : window.devicePixelRatio;
 
     let w = canvas.width = canvasWrap.offsetWidth * RESOLUTION;
     let h = canvas.height = canvasWrap.offsetHeight * RESOLUTION;
