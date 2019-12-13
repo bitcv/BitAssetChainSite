@@ -178,7 +178,7 @@
     </div>
 
     <!-- 首页介绍 -->
-    <section id="banner" class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-color: #292F36;">
+    <section id="banner" class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-color: #000;">
         <!-- <span class="mask bg-base-1 alpha-7"></span> -->
         <!-- <div id="particles-js" class="canvas"></div> -->
         <canvas class="canvas"></canvas>
@@ -523,7 +523,7 @@ $(function () {
     let w = canvas.width = canvasWrap.offsetWidth * RESOLUTION;
     let h = canvas.height = canvasWrap.offsetHeight * RESOLUTION;
 
-    const PARTICLE_COUNT = 400;
+    const PARTICLE_COUNT = 500;
     const CONNECT_DISTANCE = w * 0.05;
     const FORCE_DISTANCE = w * 0.1;
 
@@ -534,7 +534,7 @@ $(function () {
     let time = new Date;
 
     const lerp = (start, end, amt) => {
-      return (1-amt)*start+amt*end
+        return (1-amt)*start + amt*end
     };
 
     const distance = (x1, y1, x2, y2) => {
@@ -544,15 +544,20 @@ $(function () {
     };
 
     const angle = (cx, cy, ex, ey) => {
-      return Math.atan2(ey - cy, ex - cx);
+        return Math.atan2(ey - cy, ex - cx);
     };
 
     const particlePrototype = () => ({
-      x: w * 0.5 + (Math.cos(r(TAU)) * r(w* 0.5)),
-      y: h * 0.5 + (Math.sin(r(TAU)) * r(h* 0.5)),
-      angle: r(TAU),
-      speed: r(0.15),
-      normalSpeed: r(0.15),
+        // 居中分布的效果
+        // x: w * 0.5 + (Math.cos(r(TAU)) * r(w* 0.5)),
+        // y: h * 0.5 + (Math.sin(r(TAU)) * r(h* 0.5)),
+
+        // 自由分布的效果
+        x: r(w),
+        y: r(h),
+        angle: r(TAU),
+        speed: r(1.15),
+        normalSpeed: r(1.15),
         oscAmplitudeX: r(2),
         oscSpeedX: 0.001 + r(0.008),
         oscAmplitudeY: r(2),
@@ -566,22 +571,22 @@ $(function () {
     });
 
     const particles = (new Array(PARTICLE_COUNT))
-      .fill({})
-      .map(particlePrototype);
+        .fill({})
+        .map(particlePrototype);
 
     const update = () => {
       particles.forEach(p1 => {
-        p1.x += (Math.cos(p1.angle) + (Math.cos(time * p1.oscSpeedX) * p1.oscAmplitudeX)) * p1.speed;
-        p1.y += (Math.sin(p1.angle) + (Math.cos(time * p1.oscSpeedY) * p1.oscAmplitudeY)) * p1.speed;
+            p1.x += (Math.cos(p1.angle) + (Math.cos(time * p1.oscSpeedX) * p1.oscAmplitudeX)) * p1.speed;
+            p1.y += (Math.sin(p1.angle) + (Math.cos(time * p1.oscSpeedY) * p1.oscAmplitudeY)) * p1.speed;
 
-        p1.speed = lerp(p1.speed, p1.normalSpeed * RESOLUTION, 0.1);
+            p1.speed = lerp(p1.speed, p1.normalSpeed * RESOLUTION, 0.1);
 
-        if (p1.x > w || p1.x < 0) {
-          p1.angle = PI - p1.angle;
-        }
-        if (p1.y > h || p1.y < 0) {
-             p1.angle = -p1.angle;
-        }
+            if (p1.x > w || p1.x < 0) {
+                p1.angle = PI - p1.angle;
+            }
+            if (p1.y > h || p1.y < 0) {
+                p1.angle = -p1.angle;
+            }
 
             if (r() < 0.005) 
                 p1.oscAmplitudeX = r(2);
@@ -640,16 +645,15 @@ $(function () {
     };
 
     const loop = () => {
-      time = new Date;
-      update();
-      render();
-      window.requestAnimationFrame(loop);
+        time = new Date;
+        update();
+        render();
+        window.requestAnimationFrame(loop);
     };
 
     loop();
 
     window.addEventListener('mousemove', e => {
-
       const mouseX = e.layerX * RESOLUTION;
       const mouseY = e.layerY * RESOLUTION;
 
