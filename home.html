@@ -180,8 +180,8 @@
     <!-- 首页介绍 -->
     <section id="banner" class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-color: #292F36;">
         <!-- <span class="mask bg-base-1 alpha-7"></span> -->
-        <div id="particles-js" class="canvas"></div>
-        <!-- <canvas class="canvas"></canvas> -->
+        <!-- <div id="particles-js" class="canvas"></div> -->
+        <canvas class="canvas"></canvas>
         <div class="text-center">
             <div class="container">
                 <div class="py-5" style="margin: 80px 0;">
@@ -198,9 +198,7 @@
     <section id="ziPos" class="slice bg-base-5">
         <div class="container">
             <div class="section-title section-title--style-1 text-center mt-4 mb-3">
-                <h3 class="section-title-inner">
-                    <span>ZI-POS 共识</span>
-                </h3>
+                <h3 class="heading heading-1 strong-500">ZI-POS 共识</h3>
                 <div class="c-gray-light strong-300 text-center" style="font-size: 12px; margin-top: -0.5rem;">Zero Inflation Proof of Stake</div>
                 <span class="section-title-delimiter clearfix"></span>
             </div>
@@ -259,9 +257,7 @@
         <span class="mask mask-base-1--style-1"></span>
         <div class="sct-inner container">
             <div class="section-title section-title-inverse section-title--style-1 text-center mt-4 mb-3">
-                <h3 class="section-title-inner c-white">
-                    <span>Bit Asset Chain (BAC Chain)</span>
-                </h3>
+                <h3 class="heading heading-1 strong-500 c-white mb-0">Bit Asset Chain (BAC Chain)</h3>
                 <span class="section-title-delimiter clearfix"></span>
             </div>
             <div class="fluid-paragraph fluid-paragraph-sm c-white strong-300 text-center">
@@ -363,7 +359,7 @@
             <div class="row cols-xs-space cols-sm-space cols-md-space">
                 <div class="col-lg-6 order-lg-2 text-center text-lg-left align-self-center">
                     <div class="px-4">
-                        <h2 class="heading heading-1 c-white">币威钱包</h2>
+                        <h2 class="heading heading-1 strong-500 c-white">币威钱包</h2>
                         <p class="text-lg mt-4 line-height-1_8 strong-300">币威钱包是 BAC Chain 的官方钱包，自从 2018 年 5 月第一版上线后，已经迭代了 6 个版本除了对 BAC Chain 的 Token 和挖矿等功能的支持外，还支持 BTC，ETH，TRX 等超过 20 条公链和 DApps。币威钱包是一款冷热结合的钱包，用户可以根据自己的使用习惯，切换使用热钱包或者 HD 钱包，问世一年多来受到了超过 200 万用户的青睐。</p>
                         <div class="qrcode-wrap d-inline-block text-center mt-2">
                             <img src="assets/images/bac/qrcode_bitcvwallet_app.png" alt="">
@@ -382,9 +378,7 @@
     <div id="roadMap" class="slice">
             <div class="container">
                 <div class="section-title section-title-inverse section-title--style-1 text-center mt-4 mb-3">
-                    <h3 class="section-title-inner">
-                        <span>里程碑与路线图</span>
-                    </h3>
+                    <h3 class="heading heading-1 strong-500">里程碑与路线图</h3>
                     <!-- <div class="c-gray-light strong-300 text-center" style="font-size: 12px; margin-top: -0.5rem;">Zero Inflation Proof of Stake</div>
                     <span class="section-title-delimiter clearfix"></span> -->
                 </div>
@@ -505,9 +499,6 @@
 <script src="assets/vendor/isotope/isotope.min.js"></script>
 <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
-<!-- particles.js -->
-<script src="assets/vendor/particles/particles.min.js"></script>
-
 <!-- App JS -->
 <script src="assets/js/boomerang.min.js"></script>
 
@@ -523,115 +514,160 @@ $(function () {
     if (window.location.href.indexOf('nocanvas') > -1) {
         return
     }
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 5
-          },
-          "image": {
-            "src": "img/github.svg",
-            "width": 100,
-            "height": 100
-          }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 2,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
+    const canvasWrap = document.querySelector('#banner');
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const RESOLUTION = 1;
+
+    let w = canvas.width = canvasWrap.offsetWidth * RESOLUTION;
+    let h = canvas.height = canvasWrap.offsetHeight * RESOLUTION;
+
+    const PARTICLE_COUNT = 400;
+    const CONNECT_DISTANCE = w * 0.05;
+    const FORCE_DISTANCE = w * 0.1;
+
+    const r = (n = 1) => Math.random() * n;
+    const PI = Math.PI;
+    const TAU = PI * 2;
+
+    let time = new Date;
+
+    const lerp = (start, end, amt) => {
+      return (1-amt)*start+amt*end
+    };
+
+    const distance = (x1, y1, x2, y2) => {
+        const a = x1 - x2;
+        const b = y1 - y2;
+        return Math.sqrt( a*a + b*b );
+    };
+
+    const angle = (cx, cy, ex, ey) => {
+      return Math.atan2(ey - cy, ex - cx);
+    };
+
+    const particlePrototype = () => ({
+      x: w * 0.5 + (Math.cos(r(TAU)) * r(w* 0.5)),
+      y: h * 0.5 + (Math.sin(r(TAU)) * r(h* 0.5)),
+      angle: r(TAU),
+      speed: r(0.15),
+      normalSpeed: r(0.15),
+        oscAmplitudeX: r(2),
+        oscSpeedX: 0.001 + r(0.008),
+        oscAmplitudeY: r(2),
+        oscSpeedY: 0.001 + (r(0.008)),
+        connectDistance: r(CONNECT_DISTANCE),
+        color: {
+            r: Math.round(200 + r(55)),
+            g: Math.round(150 + r(105)),
+            b: Math.round(200 + r(55))
         }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "grab"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 150,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
+    });
+
+    const particles = (new Array(PARTICLE_COUNT))
+      .fill({})
+      .map(particlePrototype);
+
+    const update = () => {
+      particles.forEach(p1 => {
+        p1.x += (Math.cos(p1.angle) + (Math.cos(time * p1.oscSpeedX) * p1.oscAmplitudeX)) * p1.speed;
+        p1.y += (Math.sin(p1.angle) + (Math.cos(time * p1.oscSpeedY) * p1.oscAmplitudeY)) * p1.speed;
+
+        p1.speed = lerp(p1.speed, p1.normalSpeed * RESOLUTION, 0.1);
+
+        if (p1.x > w || p1.x < 0) {
+          p1.angle = PI - p1.angle;
         }
-      },
-      "retina_detect": true
+        if (p1.y > h || p1.y < 0) {
+             p1.angle = -p1.angle;
+        }
+
+            if (r() < 0.005) 
+                p1.oscAmplitudeX = r(2);
+            if (r() < 0.005) 
+                p1.oscSpeedX = 0.001 + (r(0.008));
+            if (r() < 0.005) 
+                p1.oscAmplitudeY = r(2);
+            if (r() < 0.005) 
+                p1.oscSpeedY = 0.001 + r(0.008);
+
+            p1.x = Math.max(-0.01,Math.min(p1.x, w + 0.01));
+            p1.y = Math.max(-0.01,Math.min(p1.y, h + 0.01));
+      });
+    };
+
+    const render = () => {
+
+        ctx.clearRect(0,0,w,h);
+
+      particles.map(p1 => {
+        particles
+                .filter(p2 => {
+                    if (p1 == p2)
+                        return false;
+                    if (distance(p1.x, p1.y, p2.x, p2.y) > p1.connectDistance)
+                        return false;
+                    return true;
+                })
+                .map(p2 => {
+                    const dist = distance(p1.x, p1.y, p2.x, p2.y);
+                    p1.speed = lerp(p1.speed, p1.speed + (0.05 / p1.connectDistance * dist), 0.2);
+                    return {
+                        p1,
+                        p2,
+                        color: p1.color,
+                        opacity: Math.floor(100 / p1.connectDistance * (p1.connectDistance - dist)) / 100
+                    };
+                })
+                .forEach((line, i) => {
+                    const colorSwing = Math.sin(time * (line.p1.oscSpeedX));
+                    ctx.beginPath();
+                    ctx.globalAlpha = line.opacity;
+                    ctx.moveTo(line.p1.x, line.p1.y);
+                    ctx.lineTo(line.p2.x, line.p2.y);
+                    ctx.strokeStyle = `rgb(
+                        ${Math.floor(line.color.r * colorSwing)},
+                        ${Math.floor((line.color.g * 0.5) + ((line.color.g * 0.5) * colorSwing))},
+                        ${line.color.b}
+                    )`
+                    ctx.lineWidth = (line.opacity * 4);
+                    ctx.stroke();
+                    ctx.closePath();
+                });
+      });
+
+    };
+
+    const loop = () => {
+      time = new Date;
+      update();
+      render();
+      window.requestAnimationFrame(loop);
+    };
+
+    loop();
+
+    window.addEventListener('mousemove', e => {
+
+      const mouseX = e.layerX * RESOLUTION;
+      const mouseY = e.layerY * RESOLUTION;
+
+      particles.forEach(p => {
+        const dist = distance(mouseX, mouseY, p.x, p.y);
+
+        if (dist < FORCE_DISTANCE && dist > 0) {
+          p.angle = angle(mouseX, mouseY, p.x, p.y)
+          const force = (FORCE_DISTANCE - dist) * 0.1;
+          p.speed = lerp(p.speed, force, 0.2);
+        }
+      });
+
+    });
+
+    window.addEventListener('resize', e => {
+        w = canvas.width = window.innerWidth * RESOLUTION;
+        h = canvas.height = window.innerHeight * RESOLUTION;
     });
 })
 </script>
