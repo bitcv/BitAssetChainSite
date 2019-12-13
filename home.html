@@ -154,13 +154,13 @@
                     <!-- Navbar links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="home.html" data-toggle="tooltip" data-placement="bottom" title="敬请期待">区块浏览器</a>
+                            <a class="nav-link" href="javascript:;" data-toggle="tooltip" data-placement="bottom" title="敬请期待">区块浏览器</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="home.html#roadMap">项目动态</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="home.html" data-toggle="tooltip" data-placement="bottom" title="敬请期待">白皮书</a>
+                            <a class="nav-link" href="javascript:;" data-toggle="tooltip" data-placement="bottom" title="敬请期待">白皮书</a>
                         </li>
                         <li class="nav-item"></li>
                             <a class="nav-link" href="javascript:;" data-toggle="tooltip" data-placement="bottom" title="敬请期待">开发者社区</a>
@@ -522,7 +522,6 @@ $(function () {
 
     let w = canvas.width = canvasWrap.offsetWidth * RESOLUTION;
     let h = canvas.height = canvasWrap.offsetHeight * RESOLUTION;
-    console.log(w, h)
 
     const PARTICLE_COUNT = 500;
     const CONNECT_DISTANCE = w * 0.05 * RESOLUTION;
@@ -557,8 +556,8 @@ $(function () {
         x: r(w),
         y: r(h),
         angle: r(TAU),
-        speed: r(1.15),
-        normalSpeed: r(1.15),
+        speed: r(2),
+        normalSpeed: r(2),
         oscAmplitudeX: r(2),
         oscSpeedX: 0.001 + r(0.008),
         oscAmplitudeY: r(2),
