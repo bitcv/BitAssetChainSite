@@ -518,13 +518,14 @@ $(function () {
     const canvas = document.querySelector('canvas');
     const ctx = canvas.getContext('2d');
 
-    const RESOLUTION = 1;
+    const RESOLUTION = window.devicePixelRatio;
 
     let w = canvas.width = canvasWrap.offsetWidth * RESOLUTION;
     let h = canvas.height = canvasWrap.offsetHeight * RESOLUTION;
+    console.log(w, h)
 
     const PARTICLE_COUNT = 500;
-    const CONNECT_DISTANCE = w * 0.05;
+    const CONNECT_DISTANCE = w * 0.05 * RESOLUTION;
     const FORCE_DISTANCE = w * 0.1;
 
     const r = (n = 1) => Math.random() * n;
@@ -603,11 +604,9 @@ $(function () {
     };
 
     const render = () => {
-
         ctx.clearRect(0,0,w,h);
-
-      particles.map(p1 => {
-        particles
+        particles.map(p1 => {
+            particles
                 .filter(p2 => {
                     if (p1 == p2)
                         return false;
@@ -640,8 +639,7 @@ $(function () {
                     ctx.stroke();
                     ctx.closePath();
                 });
-      });
-
+        });
     };
 
     const loop = () => {
