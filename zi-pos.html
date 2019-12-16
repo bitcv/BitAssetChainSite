@@ -10,7 +10,7 @@
 <meta name="keywords" content="Bit Asset Chain">
 <meta name="author" content="Bit Asset Chain">
 
-<title>Bit Asset Chain</title>
+<title>ZI-POS 介绍 - Bit Asset Chain</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
@@ -96,7 +96,7 @@
                             <a class="nav-link" href="javascript:;" data-toggle="tooltip" data-placement="bottom" title="敬请期待">区块浏览器</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="home.html#roadMap">项目动态</a>
+                            <a class="nav-link" href="timeline.html">项目动态</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:;" data-toggle="tooltip" data-placement="bottom" title="敬请期待">白皮书</a>
@@ -123,7 +123,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="py-4 text-center">
-                        <div class="heading heading-inverse heading-2 strong-600 line-height-1_8">ZI-POS 介绍页</div>
+                        <div class="heading heading-inverse heading-2 strong-600 line-height-1_8">ZI-POS 介绍</div>
                         <h4 class="heading heading-inverse alpha-8 heading-6 strong-500">ZI-POS Introduction</h4>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
 
                     <h3 class="heading heading-5 strong-600 mb-4">通缩销毁机制</h3>
                     <p class="text-md">BCV: BCV 总量 12 亿枚，永不增发。用户抵押或者销毁 BCV 购买 BAC 投票矿机挖矿是获得 BAC 的唯一方法。另外每台 BAC 投票矿机还需要充值能量值方可继续挖矿。销毁 BCV 也是获得能量值的唯一途径。</p>
-                    <p class="text-md">BAC: BAC 总量 43,695,126 枚，初始时 Bac Chain 每产出一个区块，赋予出块节点 10 枚 BAC 作为奖励。之后每半年奖励数量减半，并向下取整，直到大约两年半后所有 BAC 被挖出。</p>
+                    <p class="text-md">BAC: BAC 总量 43,695,126 枚，初始时 BAC Chain 每产出一个区块，赋予出块节点 10 枚 BAC 作为奖励。之后每半年奖励数量减半，并向下取整，直到大约两年半后所有 BAC 被挖出。</p>
                     <p class="text-md">在所有 BAC 被挖出前，用户使用 BAC Chain 转账的手续费，运行智能合约的费用，以及存贮网的存贮费用都将使用 BAC 支付，而支付的所有 BAC 都将被销毁。</p>
                     <table class="table table-bordered">
                         <thead>
@@ -280,6 +280,14 @@
 
 <!-- App JS -->
 <script src="assets/js/boomerang.min.js"></script>
+
+<!-- custom script -->
+<script>
+$(function () {
+    // tooltips
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 
 </body>
 </html>
